@@ -1,0 +1,17 @@
+.head{
+    text-align: center;
+    font-size: larger;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background-image: linear-gradient(blue, purple, red);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    
+}
