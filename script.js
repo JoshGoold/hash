@@ -54,14 +54,28 @@ decryptMsgBtn.addEventListener("click", ()=>{
 })
 
 function copyToClipboard() {
+    // Get the text from the paragraph element
+    const text = document.getElementById('dmsg').innerText;
     
-    // Select the text
-    msgDisplay.select();
-    msgDisplay.setSelectionRange(0, 99999); // For mobile devices
+    // Create a temporary textarea element
+    const tempTextArea = document.createElement('textarea');
+    
+    // Set the textarea's value to the text to be copied
+    tempTextArea.value = text;
+    
+    // Append the textarea to the body (required for the copy command to work)
+    document.body.appendChild(tempTextArea);
+    
+    // Select the text in the textarea
+    tempTextArea.select();
+    tempTextArea.setSelectionRange(0, 99999); // For mobile devices
     
     // Copy the text to the clipboard
     document.execCommand('copy');
     
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+    
     // Alert the user
-    alert('Text copied to clipboard: ' + msgDisplay.value);
+    alert('Text copied to clipboard: ' + text);
 }
