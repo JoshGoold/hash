@@ -52,3 +52,16 @@ decryptMsgBtn.addEventListener("click", ()=>{
     demsgDisplay.textContent = encyptedMessage;
 
 })
+
+function copyToClipboard() {
+    
+    // Select the text
+    msgDisplay.select();
+    msgDisplay.setSelectionRange(0, 99999); // For mobile devices
+    
+    // Copy the text to the clipboard
+    document.execCommand('copy');
+    
+    // Alert the user
+    alert('Text copied to clipboard: ' + msgDisplay.value);
+}
