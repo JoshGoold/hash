@@ -13,8 +13,8 @@ body{
     background-size: cover;
     height: 100vh;
     color: white;
-}
-    
+}  
+
 .small-box{
     display: flex;
     justify-content: center;
